@@ -8,7 +8,7 @@ import { CustomStatusBar } from '../components/CustomStatusBar';
 const Stack = createNativeStackNavigator();
 
 const MainScreen = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
 
 
   return (
