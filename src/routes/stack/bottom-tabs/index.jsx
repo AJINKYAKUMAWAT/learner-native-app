@@ -2,11 +2,11 @@ import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../../../screens/home/Home';
-import Chat from '../../../screens/chat/Chat';
 import Profile from '../../../screens/profile/Profile';
 import ChatIcon from '../../../components/Icons/ChatIcon';
 import ProfileIcon from '../../../components/Icons/ProfileIcon';
 import HomeIcon from '../../../components/Icons/HomeIcon';
+import ChatTab from './ChatTab';
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -43,7 +43,7 @@ const BottomTabsStack = () => {
       />
       <BottomTabs.Screen
         name={'Chat'}
-        component={Chat}
+        component={ChatTab}
         options={{
           tabBarLabel: 'Chat',
           tabBarIcon: ({focused}) => (

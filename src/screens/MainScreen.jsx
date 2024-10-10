@@ -4,6 +4,7 @@ import BottomTabsStack from '../routes/stack/bottom-tabs';
 import LoginScreeen from '../auth/Login';
 import OtpScreen from '../auth/OtpScreen';
 import { CustomStatusBar } from '../components/CustomStatusBar';
+import MainStack from '../routes/stack/mainStack';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +19,7 @@ const MainScreen = () => {
             screenOptions={{
               headerShown: false,
             }}>
-            <Stack.Screen name="Homescreen" component={BottomTabsStack} />
+            <Stack.Screen name="Homescreen" component={MainStack} />
           </Stack.Navigator>
       ) : (
         <Stack.Navigator

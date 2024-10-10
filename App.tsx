@@ -7,18 +7,21 @@ import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
 import MainScreen from './src/screens/MainScreen';
+import {PaperProvider} from 'react-native-paper';
 
 enableScreens();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <GestureHandlerRootView>
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <MainScreen />
-        </SafeAreaProvider>
-      </GestureHandlerRootView>
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <GestureHandlerRootView>
+          <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+            <MainScreen />
+          </SafeAreaProvider>
+        </GestureHandlerRootView>
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 
